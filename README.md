@@ -23,4 +23,19 @@
 2. Let's practice `if` syntax.
 
 
-3. As we saw in class, a script can take arguments from the command line.
+3. *A self-documenting script*
+
+   Suppose we have the following script:
+
+   It requires 2 arguments.  But what if the arguments are not provided?
+
+   The special variable `$#` holds the number of arguments passed.
+
+   We can test use `-eq` in an if-test condition to compare the number
+   of arguments passed in to the number we want.
+
+   Modify the script to test if there are 2 arguments, and if not,
+   have it print out the usage and exit the script using the `exit`
+   command.
+
+
