@@ -101,24 +101,24 @@
 
    *Your task:* We want to make 2 modifications to the script:
 
-   a. What if the arguments are not provided?  The special variable
-      `$#` holds the number of arguments passed.  We can test use
-      `-eq` in an if-test condition to compare the number of arguments
-      passed in to the number we want.
+       a. What if the arguments are not provided?  The special variable
+          `$#` holds the number of arguments passed.  We can test use
+          `-eq` in an if-test condition to compare the number of arguments
+          passed in to the number we want.
 
-      Modify the script to test if there are 2 arguments, and if not,
-      have it print out the usage and exit the script using the `exit`
-      command.
+          Modify the script to test if there are 2 arguments, and if not,
+          have it print out the usage and exit the script using the `exit`
+          command.
 
-   b. If the user passes `-1` as the second argument, have the number
-      of lines it prints be equal to the length of the string.
+       b. If the user passes `-1` as the second argument, have the number
+          of lines it prints be equal to the length of the string.
 
-      To help accomplish this, you might want to set the number of lines
-      to output to a variable like `count`, e.g., as
-      ```
-      count=$2
-      ```
-      (notice: no spaces), and then modify the loop to do:
-      ```
-      for i in $(seq 0 ${count})
-      ```
+          To help accomplish this, you might want to set the number of lines
+          to output to a variable like `count`, e.g., as
+          ```
+          count=$2
+          ```
+          (notice: no spaces), and then modify the loop to do:
+          ```
+          for i in $(seq 0 ${count})
+          ```
