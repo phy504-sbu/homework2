@@ -2,6 +2,10 @@
 
 ### due: Friday Feb 18, 2022
 
+> Each student is responsible for doing their own work.  You are welcome to
+> discuss this on slack or in class, but when it comes to writing the code,
+> you are expected to write it yourself (and not just copy from someone).
+
 1. In this repo, you'll find a directory call `images/`.  It contains
    several photos in JPG format (all of my dog, Luna).  A common task
    that we want to do is make thumbnails of our images (much smaller
