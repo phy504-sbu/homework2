@@ -7,18 +7,30 @@
    that we want to do is make thumbnails of our images (much smaller
    "preview" versions).  This is an ideal thing to script.
 
-   Write a script that loops over all of the `.jpg` files, and uses
-   the imagemagic convert command to reduce the size to 10% and
+   *Your task*: Write a script that loops over all of the `.jpg` files, and uses
+   the imagemagic convert `command` to reduce the size to 10% and
    convert them to `.png` files.
 
    For a file named `image.jpg`, this can be done as:
 
    ```
-   convert --resize 10% image.jpg image.png
+   convert --resize 10% image.jpg newimage.png
    ```
 
-   your task is to automate this in a script.
+   Notice that it detects the format of the output image
+   (`newimage.png` here) based on the file extension, so your script
+   will need to modify the extension (think back to how we used
+   `basename` in class).
 
+   **Be sure to make your script executable.**
+
+   I should be able to do run your script as:
+
+   ```
+   ./imageconvert.sh
+   ```
+
+   and it will loop over all of the files, resize and convert them.
 
 2. Let's practice `if` syntax.
 
