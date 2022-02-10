@@ -62,7 +62,7 @@
     test
    test
    ```
-   
+
    It requires 2 arguments.  `$2` is the number of lines we output.  We use the
    `seq` command to generate the numbers 0 up to the value in `$2`.  For instance,
    doing:
@@ -90,7 +90,7 @@
    `${var}`, from character `start` to `end`.
 
    We want to make 2 modifications to the script:
-   
+
    a. What if the arguments are not provided?  The special variable
       `$#` holds the number of arguments passed.  We can test use
       `-eq` in an if-test condition to compare the number of arguments
@@ -102,7 +102,7 @@
 
    b. If the user passes `-1` as the second argument, have the number
       of lines it prints be equal to the length of the string.
-      
+
       To accomplish this, you might want to set the number of lines to output to a variable like `count`, e.g.,
       as
       ```
@@ -110,7 +110,5 @@
       ```
       (notice: no spaces), and then modify the loop to do:
       ```
-      for i in $(seq 0 ${count})      
+      for i in $(seq 0 ${count})
       ```
-      
-      
