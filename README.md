@@ -43,7 +43,8 @@
      echo "${1:$i:${#1}}"
    done
    ```
-
+   This uses some ways of dealing with Bash variables that we will describe below.
+   
    It can be run as:
    ```
    ./prettyprint.sh "this is a test" 10
@@ -89,7 +90,16 @@
    the Bash syntax `${var:start:end}` to output a substring of
    `${var}`, from character `start` to `end`.
 
-   We want to make 2 modifications to the script:
+   For example, doing the following on the command line:
+   ```
+   var="hello"; echo ${var:2:4}
+   ```
+   would output:
+   ```
+   llo
+   ```
+
+   *Your task:* We want to make 2 modifications to the script:
 
    a. What if the arguments are not provided?  The special variable
       `$#` holds the number of arguments passed.  We can test use
@@ -103,8 +113,8 @@
    b. If the user passes `-1` as the second argument, have the number
       of lines it prints be equal to the length of the string.
 
-      To accomplish this, you might want to set the number of lines to output to a variable like `count`, e.g.,
-      as
+      To help accomplish this, you might want to set the number of lines
+      to output to a variable like `count`, e.g., as
       ```
       count=$2
       ```
