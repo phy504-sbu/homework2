@@ -32,14 +32,64 @@
 
    and it will loop over all of the files, resize and convert them.
 
-2. Let's practice `if` syntax.
+2. *A self-documenting script*
 
+   The script `prettyprint.sh` in this repo contains the following code:
+   ```
+   #!/bin/bash
 
-3. *A self-documenting script*
+   for i in $(seq 0 ${2})
+   do
+     echo "${1:$i:${#1}}"
+   done
+   ```
 
-   Suppose we have the following script:
+   It can be run as:
+   ```
+   ./prettyprint.sh "this is a test" 10
+   ```
+   and outputs:
+   ```
+   this is a test
+   his is a test
+   is is a test
+   s is a test
+    is a test
+   is a test
+   s a test
+    a test
+   a test
+    test
+   test
+   ```
+   
+   It requires 2 arguments.  `$2` is the number of lines we output.  We use the
+   `seq` command to generate the numbers 0 up to the value in `$2`.  For instance,
+   doing:
+   ```
+   seq 0 10
+   ```
+   outputs:
+   ```
+   0
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   ```
 
-   It requires 2 arguments.  But what if the arguments are not provided?
+   The first argument, `$1`, is what we will print.  We use a special
+   Bash syntax, `${#1}`, to get the length of the string, and we use
+   the Bash syntax `${var:start:end}` to output a substring of
+   `${var}`, from character `start` to `end`.
+
+   We then output But what if the arguments are not provided?
 
    The special variable `$#` holds the number of arguments passed.
 
