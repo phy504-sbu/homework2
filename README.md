@@ -14,7 +14,7 @@
    For a file named `image.jpg`, this can be done as:
 
    ```
-   convert --resize 10% image.jpg image.png
+   convert -resize 10% image.jpg image.png
    ```
 
    your task is to automate this in a script.
