@@ -1,0 +1,8 @@
+
+
+jpg
+png
+jpg
+png
+*.jpg
+checker.txt
