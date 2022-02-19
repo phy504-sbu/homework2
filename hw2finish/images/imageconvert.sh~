@@ -1,0 +1,6 @@
+
+for x in $(ls *.jpg)
+do
+    
+    convert -resize 10% $x $(basename $x .jpg).png
+done
